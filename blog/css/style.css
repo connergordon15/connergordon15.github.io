@@ -1,0 +1,234 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/* FONTS */
+@font-face {
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "lato-regular";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* TYPOGRAPHY */
+h1, h2, h3 {
+    font-family: lato-regular;
+}
+h1 {
+    font-family: roboto;
+    text-align: center;
+    transform: rotate(-5deg);
+    font-size: 4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.7rem;
+}
+p  {
+    font-size: 1.5rem;
+}
+span {
+    font-family: ultra;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1rem 1.75rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color:#e6ecc1;
+    box-shadow: 5px 5px 4px -1px #888;
+    background-color: #a34b4b;
+}
+
+.expand {
+    font-size: .3rem;
+    text-align: left;
+    text-decoration: none;
+}
+
+.highlight {
+    font-family: ultra;
+    font-size: 3rem;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1rem 1.75rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color:#ffffff;
+    box-shadow: 5px 5px 4px -1px #888;
+    background-color: #25acd4;
+    margin-top: 2rem;
+}
+
+aside p {
+    border-bottom: .1rem solid black;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;;
+}
+
+body {
+    margin: 1.5rem auto;
+    width: 100%;
+    min-width: 56.25rem;
+}
+
+main {
+    overflow:auto;
+    width: 100%;
+    min-width:45rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+/* LAYOUT */
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+aside {
+    padding: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: .1rem solid black;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.subsection {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/* IMAGES AND FIGURES */
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+
+figcaption {
+    background-color: #e6ecc1;
+    color: #FFF;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* NAV BAR */
+nav {
+    padding-left: 0;
+    margin-top: 0.25rem;
+    width: 100%;
+    border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
+}
+
+nav a{
+    font-family: opensans;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #2562d4;
+}
+
+nav a:focus,
+nav a:hover{
+    color: #FFF;
+    background-color: #33658A;
+}
+
+nav a:active {
+    color: #FFF;
+    background-color: #000;
+}
