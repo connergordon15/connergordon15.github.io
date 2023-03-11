@@ -125,6 +125,7 @@ span {
     box-shadow: 5px 5px 4px -1px #888;
     background-color: #25acd4;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 aside p {
@@ -145,6 +146,7 @@ body {
     margin: 1.5rem auto;
     width: 100%;
     min-width: 56.25rem;
+    max-width:1500px;
 }
 
 main {
@@ -179,6 +181,16 @@ article {
     display: flex;
     width: 100%;
     align-items: center;
+    text-decoration: none;
+}
+
+
+.copyright{
+    float: left;
+}
+.attribution {
+    float: right;
+    width: 33%;
 }
 
 /* IMAGES AND FIGURES */
@@ -198,7 +210,7 @@ figure {
 
 figcaption {
     background-color: #e6ecc1;
-    color: #FFF;
+    color: #000000;
     text-decoration: none;
     padding: 1rem;
 }
